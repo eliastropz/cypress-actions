@@ -31,8 +31,7 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}       
-  cypress-e2e-chrome:
-    needs: cypress-e2e-electron
+  cypress-e2e-chrome:    
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false       
@@ -55,8 +54,7 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  cypress-e2e-firefox:
-    needs: cypress-e2e-electron
+  cypress-e2e-firefox:    
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false        
