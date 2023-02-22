@@ -23,6 +23,7 @@ jobs:
           install-command: yarn install
           browser: electron
           record: true
+          parallel: true
           group: UI Eletron
           spec: ${{ github.event.inputs.spec }}
         env:
